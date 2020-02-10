@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_view_home"
+        android:title="@string/drawer_home" />
+    <item
+        android:id="@+id/nav_view_all_categories"
+        android:title="@string/drawer_all_categories" />
+    <item
+        android:id="@+id/nav_view_subscriptions"
+        android:title="@string/drawer_subscriptions" />
+    <item
+        android:id="@+id/nav_view_my_orders"
+        android:title="@string/drawer_my_orders" />
+    <item
+        android:id="@+id/nav_view_my_address"
+        android:title="@string/drawer_my_address" />
+    <item
+        android:id="@+id/nav_view_profile"
+        android:title="@string/drawer_profile" />
+
+    <item
+        android:id="@+id/nav_view_faq"
+        android:title="@string/drawer_faq" />
+
+    <item
+        android:id="@+id/nav_view_logout"
+        android:title="@string/drawer_logout" />
+
+
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lldateselection"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13ssp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="center|left"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/msg_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure to pause?"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+       android:layout_marginTop="10dp">
+
+
+        <Button
+            android:id="@+id/btPauseOrderCancel"
+            style="@style/DialogTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/regular_font"
+            android:background="@color/colorPrimary"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+        <Button
+            android:id="@+id/btPauseOrderOkay"
+            style="@style/DialogTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/regular_font"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+    </LinearLayout>
+</LinearLayout>

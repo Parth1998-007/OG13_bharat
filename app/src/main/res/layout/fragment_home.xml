@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_offer" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        style="@style/TextHeadingLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_subscription"
+                        android:textAllCaps="false" />
+
+                    <LinearLayout android:id="@+id/llsubscription"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_height="wrap_content">
+                        <com.github.siyamed.shapeimageview.RoundedImageView
+                            android:id="@+id/imgSubscription"
+                            android:layout_width="@dimen/_80sdp"
+                            android:src="@drawable/milk"
+                            android:scaleType="centerCrop"
+                            app:siRadius="@dimen/_10sdp"
+                            app:siBorderColor="@android:color/transparent"
+                            android:layout_height="@dimen/_80sdp" />
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent">
+<!--
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:id="@+id/tv_size"
+                                style="@style/TextHeading"
+                                android:layout_gravity="center"
+                                android:textColor="@color/colorTextLight"
+                                android:layout_height="wrap_content" />
+-->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="@string/lbl_order_subscription_now"
+                                style="@style/TextHeading"
+                                android:layout_gravity="center"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_height="wrap_content" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+<!--
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvSubscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_subscription" />
+-->
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/TextHeadingLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/lbl_categories"
+                android:textAllCaps="false" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/item_category_home" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/imgOffer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:padding="@dimen/_2sdp">
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            style="@style/TextHeading"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/lblRuppe"
+            android:layout_width="wrap_content"
+            android:text="@string/ruppie"
+            android:layout_below="@+id/tvItemName"
+            style="@style/TextHeading"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_below="@+id/tvItemName"
+            android:layout_toRightOf="@+id/lblRuppe"
+            android:layout_width="wrap_content"
+            style="@style/TextHeading"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:background="@color/white"
+        style="@style/TextHeading"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_below="@id/tvPrice"
+        android:background="@color/colorDivider"/>
+</RelativeLayout>

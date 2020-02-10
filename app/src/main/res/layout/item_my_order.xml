@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.cardview.widget.CardView
+    android:id="@+id/imgOffer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/llmain"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextHeading"
+                    android:text="@string/lbl_order_Id"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:text="1"
+                    android:id="@+id/tv_orderid"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextHeading"
+                    android:text="@string/lbl_order_date"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:text="16-Mar-2019"
+                    android:id="@+id/tv_orderdate"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextHeading"
+                    android:text="@string/lbl_amount"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:text="₹200"
+                    android:id="@+id/tv_orderamount"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+            <ImageView
+                style="@style/ImageStatus"
+                android:id="@+id/iv_statusplace0"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:src="@drawable/order_status_done" />
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/iv_lineplace1"
+                android:layout_weight="1"
+                android:src="@drawable/order_status_line_done"
+                android:layout_height="wrap_content" />
+            <ImageView
+                style="@style/ImageStatus"
+                android:id="@+id/iv_statusplace1"
+                android:src="@drawable/order_status_done" />
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/iv_lineplace2"
+                android:layout_weight="1"
+                android:src="@drawable/order_status_line_done"
+                android:layout_height="wrap_content" />
+            <ImageView
+                style="@style/ImageStatus"
+                android:id="@+id/iv_statusTransit1"
+                android:src="@drawable/order_status_done" />
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/iv_lineTransit2"
+                android:layout_weight="1"
+                android:src="@drawable/order_status_line_done"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_statusplace2"
+                style="@style/ImageStatus"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/order_status_not_done" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center|top"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+                    style="@style/ImageSmall"
+                    android:id="@+id/iv_orderplace"
+                    android:src="@drawable/order_placed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:id="@+id/tv_orderplace"
+                    android:text="@string/lbl_order_placed"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    style="@style/ImageSmall"
+                    android:id="@+id/iv_accepted"
+                    android:src="@drawable/accepted"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:id="@+id/tv_accepted"
+                    android:text="@string/lbl_accepted"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    style="@style/ImageSmall"
+                    android:id="@+id/iv_transit"
+                    android:src="@drawable/transit"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:id="@+id/tv_transit"
+                    android:text="@string/lbl_transit"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+                    style="@style/ImageSmall"
+                    android:id="@+id/iv_delivered"
+                    android:src="@drawable/delivered" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextRegularLight"
+                    android:id="@+id/tv_delivered"
+                    android:gravity="right"
+                    android:text="@string/lbl_delivered"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

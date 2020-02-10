@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imgOffer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/imgSubscription"
+                android:layout_width="@dimen/_100sdp"
+                android:src="@drawable/product"
+                android:scaleType="centerCrop"
+                app:siRadius="@dimen/_5sdp"
+                app:siBorderColor="@android:color/transparent"
+                android:layout_height="@dimen/_80sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/TextHeading"
+                android:gravity="right"
+                android:background="@color/colorRed"
+                android:layout_gravity="left"
+                android:visibility="invisible"
+                android:id="@+id/tvproductstatus"
+                android:text="OutOfStock"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="ORGANIC MILK"
+                android:id="@+id/tv_productname"
+                style="@style/TextHeading"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="size"
+                android:maxLines="2"
+                android:id="@+id/tv_productsize"
+                style="@style/TextRegularLight"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="product details"
+                android:maxLines="2"
+                android:id="@+id/tv_productdetail"
+                style="@style/TextRegularLight"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/ruppie"
+                    style="@style/TextHeading"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvOldPrice"
+                    android:layout_width="wrap_content"
+                    android:text="199"
+                    style="@style/TextHeading"
+                    android:textColor="@color/colorRed"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="199"
+                    android:id="@+id/tv_newprice"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    style="@style/TextHeading"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btadd"
+                style="@style/DialogTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1.5"
+                android:background="@color/colorPrimary"
+                android:text="ADD"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/lladd"
+                android:visibility="visible"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/minus"
+                    android:id="@+id/iv_dec"
+                    style="@style/ImageSmall"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/TextHeading"
+                    android:id="@+id/tvqty"
+                    android:text="0"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/plus"
+                    android:id="@+id/iv_inc"
+                    style="@style/ImageSmall"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/TextHeading"
+                    android:gravity="right"
+                    android:visibility="invisible"
+                    android:text="OutOfStock"
+                    android:textColor="@color/colorRed"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

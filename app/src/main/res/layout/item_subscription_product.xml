@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imgOffer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/imgSubscription"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/milk"
+            app:siBorderColor="@android:color/transparent"
+            app:siRadius="@dimen/_5sdp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_prodname"
+                    style="@style/TextHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ORGANIC MILK" />
+
+                <TextView
+                    android:id="@+id/tv_proddetail"
+                    style="@style/TextRegularLight"
+                    android:maxLines="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="product details" />
+                <TextView
+                    android:id="@+id/tvProductSize"
+                    android:fontFamily="@font/regular_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:id="@+id/ll_order"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:padding="@dimen/_1sdp">
+
+                <Button
+                    android:id="@+id/btrepeatOrder"
+                    style="@style/DialogTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tvAddress"
+                    android:layout_gravity="center"
+                    android:text="Repeat Order"
+                    android:textSize="@dimen/_7sdp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btPauseOrder"
+                    style="@style/DialogTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tvAddress"
+                    android:layout_gravity="center"
+                    android:text="Pause Order"
+                    android:textSize="@dimen/_7sdp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btresumeOrder"
+                    style="@style/DialogTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tvAddress"
+                    android:layout_gravity="center"
+                    android:text="Resume Order"
+                    android:textSize="@dimen/_7sdp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

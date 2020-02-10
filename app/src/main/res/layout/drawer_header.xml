@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorPrimaryDark" />
+
+    <RelativeLayout
+        android:id="@+id/navTitle"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,"
+            android:id="@+id/tvhi"
+            android:textSize="20sp"
+            style="@style/DialogTitleText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvname"
+            android:textColor="@color/colorTextWhite"
+            android:text=""
+            android:layout_below="@id/tvhi"
+            style="@style/TextHeading"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvname"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvphone"
+            android:maxLength="10"
+            android:text=""
+            android:textColor="@color/colorTextWhite"
+            style="@style/TextHeading"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

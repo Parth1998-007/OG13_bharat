@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/schedule_order_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rr"
+                android:layout_width="match_parent"
+                android:layout_above="@+id/rr3"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cvedit"
+                    android:layout_margin="@dimen/_10sdp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvAddress"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:padding="3dp"
+                                        android:text="Locality: "
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <EditText
+                                        android:id="@+id/etAddress"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:visibility="visible"
+                                        android:enabled="true"
+                                        android:focusable="true"
+                                        android:background="@color/white"
+                                        android:singleLine="true"
+                                        android:hint="Enter locality here "
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvflatNo"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:padding="3dp"
+                                        android:singleLine="true"
+                                        android:text="Flat/House/Office No: "
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <EditText
+                                        android:id="@+id/etflatNo"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:singleLine="true"
+                                        android:enabled="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@color/white"
+                                        android:visibility="visible"
+                                        android:hint="Enter flat/house number here "
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+                                <!--
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:orientation="vertical">
+                                                        <TextView
+                                                            style="@style/TextRegularBol"
+                                                            android:id="@+id/tvCountry"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:text="Country: "
+                                                            android:padding="3dp"/>
+                                                            <EditText
+                                                                style="@style/TextRegular"
+                                                                android:id="@+id/etCountry"
+                                                                android:hint="Enter country here"
+                                                                android:background="@color/white"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginLeft="10dp"
+                                                                android:padding="3dp"/>
+                                                        </LinearLayout>
+                                -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvSociety"
+                                        style="@style/TextHeading"
+                                        android:singleLine="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:padding="3dp"
+                                        android:text="Street/Society/Office Name: "
+                                        android:textSize="@dimen/_13ssp" />
+
+
+                                    <EditText
+                                        android:id="@+id/etSociety"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:singleLine="true"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@color/white"
+                                        android:enabled="true"
+                                        android:hint="Enter society name here "
+                                        android:padding="3dp"
+                                        android:visibility="visible"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvCity"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:padding="3dp"
+                                        android:singleLine="true"
+                                        android:text="City Name: "
+                                        android:textSize="@dimen/_13ssp" />
+
+
+                                    <EditText
+                                        android:id="@+id/etCity"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@color/white"
+                                        android:hint="Enter City name here "
+                                        android:padding="3dp"
+                                        android:enabled="true"
+                                        android:singleLine="true"
+                                        android:visibility="visible"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tvetcityeerror"
+                                        style="@style/TextHeading"
+                                        android:text="Sorry! we are not available in your city"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:singleLine="true"
+                                        android:background="@color/white"
+                                        android:padding="3dp"
+                                        android:visibility="gone"
+                                        android:textColor="@color/colorRed"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvLandmark"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:singleLine="true"
+                                        android:padding="3dp"
+                                        android:text="Landmark: "
+                                        android:textSize="@dimen/_13ssp" />
+
+
+
+                                    <EditText
+                                        android:id="@+id/etLandmark"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:singleLine="true"
+                                        android:visibility="visible"
+                                        android:enabled="true"
+                                        android:background="@color/white"
+                                        android:hint="Enter landmark here"
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvPincode"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:singleLine="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:padding="3dp"
+                                        android:text="Pincode: "
+                                        android:textSize="@dimen/_13ssp" />
+
+
+                                    <EditText
+                                        android:id="@+id/etPincode"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@color/white"
+                                        android:visibility="visible"
+                                        android:enabled="true"
+                                        android:hint="Enter pincode here "
+                                        android:singleLine="true"
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tvetPincodeerror"
+                                        style="@style/TextHeading"
+                                        android:visibility="gone"
+                                        android:singleLine="true"
+                                        android:text="Sorry! we are not available in this area"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@color/white"
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorRed"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvContact"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:singleLine="true"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:padding="3dp"
+                                        android:text="Contact: "
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <EditText
+                                        android:id="@+id/etContact"
+                                        style="@style/TextHeading"
+                                        android:maxLength="10"
+                                        android:inputType="phone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:singleLine="true"
+                                        android:enabled="true"
+                                        android:background="@color/white"
+                                        android:visibility="visible"
+                                        android:hint="Enter Contact here "
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvemail"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:singleLine="true"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:padding="3dp"
+                                        android:text="Email: "
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <EditText
+                                        android:id="@+id/etemail"
+                                        style="@style/TextHeading"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:singleLine="true"
+                                        android:enabled="true"
+                                        android:background="@color/white"
+                                        android:visibility="visible"
+                                        android:hint="Enter email here "
+                                        android:padding="3dp"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rr3"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:layout_above="@id/rr2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/bt_edit"
+                        style="@style/DialogTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/bt_save"
+                        style="@style/DialogTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp">
+
+                <Button
+                    android:id="@+id/btnProceed"
+                    style="@style/DialogTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Proceed" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.organicbharat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".ui.my_orders.RepeatOrder"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.my_orders.SubscriptionOrderDetails"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.cart.SubscriptionSummery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.SubscriptionProductDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.Product"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.address.DeliveryAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.faq.Faq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.AddSubscription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cart.Cart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cart.OrderSummery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.my_orders.MyOrders"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.UserProfile"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/mapApi" />
+
+        <activity
+            android:name=".ui.my_orders.OrdersDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.Home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+       <!-- <service android:name=".notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>-->
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_path" />
+        </provider>
+    </application>
+
+</manifest>

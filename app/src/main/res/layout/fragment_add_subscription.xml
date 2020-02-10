@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp">
+
+                            <com.github.siyamed.shapeimageview.RoundedImageView
+                                android:id="@+id/imgSubscription"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_80sdp"
+                                android:scaleType="centerCrop"
+                                app:siBorderColor="@android:color/transparent"
+                                app:siRadius="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_prodname"
+                                    style="@style/TextHeading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp">
+
+                                    <TextView
+                                        style="@style/TextRegularBol"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="₹"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvOldPrice"
+                                        style="@style/TextRegularBol"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/colorRed" />
+
+                                    <TextView
+                                        style="@style/TextRegularBol"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:text="₹"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvnewPrice"
+                                        style="@style/TextRegularBol"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <Button
+                                        android:id="@+id/btnproddetails"
+                                        style="@style/DialogTitleText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Product Details" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioGroup
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:id="@+id/rbtDaily"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:checked="true"
+                                        android:text="@string/lbl_daily" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbtAlter"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:text="@string/lbl_alternate_days" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/llAltSelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:visibility="gone">
+
+                                        <TextView
+                                            android:id="@+id/lblDayOne"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_25sdp"
+                                            android:text="@string/lbl_day_odd" />
+
+                                        <TextView
+                                            android:id="@+id/lblDayNext"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_above="@+id/pickerEven"
+                                            android:layout_marginLeft="@dimen/_25sdp"
+                                            android:layout_toRightOf="@+id/pickerOdd"
+                                            android:text="@string/lbl_day_even" />
+
+                                        <fragment
+                                            android:id="@+id/pickerOdd"
+                                            android:name="com.organicbharat.views.NumberPicker"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/lblDayOne"
+                                            android:layout_marginLeft="@dimen/_25sdp" />
+
+                                        <fragment
+                                            android:id="@+id/pickerEven"
+                                            android:name="com.organicbharat.views.NumberPicker"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/lblDayOne"
+                                            android:layout_marginLeft="@dimen/_25sdp"
+                                            android:layout_toRightOf="@+id/pickerOdd" />
+
+                                    </RelativeLayout>
+
+                                    <RadioButton
+                                        android:id="@+id/rbtSelectDays"
+                                        style="@style/TextHeading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:text="@string/lbl_selected_days" />
+                                </RadioGroup>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/llDailySelection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:gravity="center">
+
+                                        <fragment
+                                            android:id="@+id/pickerDaily"
+                                            android:name="com.organicbharat.views.NumberPickerDaily"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llChks1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_sun" />
+
+                                    <fragment
+                                        android:id="@+id/np1"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_mon" />
+
+                                    <fragment
+                                        android:id="@+id/np2"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_tue" />
+
+                                    <fragment
+                                        android:id="@+id/np3"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_wed" />
+
+                                    <fragment
+                                        android:id="@+id/np4"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_thu" />
+
+                                    <fragment
+                                        android:id="@+id/np5"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_fri" />
+
+                                    <fragment
+                                        android:id="@+id/np6"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/TextRegularLight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/lbl_sat" />
+
+                                    <fragment
+                                        android:id="@+id/np7"
+                                        android:name="com.organicbharat.views.NumberPickerVertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        style="@style/TextHeadingLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/lbl_duration"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorAccent" />
+
+                    <LinearLayout
+                        android:id="@+id/llStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/_10sdp">
+
+                        <TextView
+                            style="@style/TextHeading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/lbl_start_date"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:id="@+id/tvStartDate"
+                            style="@style/TextRegularBolLight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:text="15-1-2019"
+                            android:textAllCaps="true" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/_10sdp">
+
+                        <TextView
+                            style="@style/TextHeading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/lbl_end_date"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:id="@+id/tvEndDate"
+                            style="@style/TextRegularBolLight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:text="(Optional)" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/right" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llbottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvorderamount"
+                        style="@style/TextHeadingBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="@string/lbl_order_amount" />
+
+                    <TextView
+                        android:id="@+id/tvamount"
+                        style="@style/TextHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="₹0"
+                        android:textColor="@color/colorAccent" />
+
+                    <Button
+                        android:id="@+id/btdone"
+                        style="@style/LoginButton"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/colorAccent"
+                        android:text="@string/lbl_proceed" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

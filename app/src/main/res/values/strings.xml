@@ -1,0 +1,153 @@
+<resources>
+
+    <string name="app_name">Organic Bharat</string>
+    <string name="hint_phone">Enter Phone Number</string>
+    <string name="hint_pass">Enter Password</string>
+    <string name="hint_login">Login</string>
+    <string name="lbl_register">Register</string>
+    <string name="msg_try_again">Please try again</string>
+    <string name="no_data">Data not found</string>
+
+    <!-- Home -->
+    <string name="drawer_profile">Profile</string>
+    <string name="hint_search_product">Type To Search Product</string>
+    <string name="lbl_subscription">Subscription</string>
+    <string name="lbl_categories">Categories</string>
+    <string name="lbl_home">Home</string>
+    <string name="lbl_explore">Search</string>
+    <string name="lbl_order_subscription_now">Order Subscription Now!</string>
+    <string name="hint_email">Enter Email</string>
+    <string name="lbl_add_to_cart">Add To Cart</string>
+    <string name="lbl_daily">Daily</string>
+    <string name="lbl_alternate_days">Alternate Days</string>
+    <string name="lbl_selected_days">Selected Days</string>
+    <string name="lbl_sun">Sun</string>
+    <string name="lbl_mon">Mon</string>
+    <string name="lbl_tue">Tue</string>
+    <string name="lbl_wed">Wed</string>
+    <string name="lbl_thu">Thu</string>
+    <string name="lbl_fri">Fri</string>
+    <string name="lbl_sat">Sat</string>
+    <string name="lbl_duration">DURATION</string>
+    <string name="lbl_start_date">Start Date</string>
+    <string name="lbl_end_date">End Date</string>
+    <string name="lbl_order_amount">Order Amount</string>
+    <string name="lbl_done">Done</string>
+    <string name="lbl_verification_code">Verification Code</string>
+    <string name="drawer_home">Home</string>
+    <string name="drawer_all_categories">Categories</string>
+    <string name="drawer_subscriptions">Subscriptions</string>
+    <string name="drawer_offers">Offers</string>
+    <string name="drawer_faq">FAQs</string>
+    <string name="drawer_logout">Logout</string>
+    <string name="drawer_my_orders">My Orders</string>
+    <string name="ruppie">₹</string>
+    <string name="valid_phone">Enter Valid Phone Number</string>
+    <string name="valid_otp">Enter Valid OTP</string>
+    <string name="msg_login">We will send you One time password. Standard rate of SMS may apply</string> <!--Carrier rate-->
+    <string name="title_add_subscription">Add Subscription</string>
+    <string name="title_my_cart">My Cart</string>
+    <string name="lbl_delivery_address">Delivery Address</string>
+    <string name="lorem_small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="lbl_cont">Continue</string>
+    <string name="title_order_summery">Order summary</string>
+    <string name="lbl_apply">Apply</string>
+    <string name="lbl_price_details">Price Details</string>
+    <string name="lbl_subtotal">Subtotal</string>
+    <string name="lbl_delivery">Delivery</string>
+    <string name="lbl_delivery_time">Delivery Time</string>
+    <string name="lbl_gst">Gst</string>
+    <string name="lbl_discount">Discount</string>
+    <string name="lbl_payable">Payable Amount</string>
+    <string name="lbl_pay_now">Pay Now</string>
+    <string name="lbl_product">Product</string>
+    <string name="lbl_qty">Qty</string>
+    <string name="lbl_price">Price</string>
+    <string name="hint_coupon_code">Coupon Code</string>
+    <string name="title_my_orders">My Orders</string>
+    <string name="lbl_order_Id">Order Id</string>
+    <string name="lbl_order_date">Order Date</string>
+    <string name="lbl_amount">Amount</string>
+    <string name="lbl_order_placed">Order Placed</string>
+    <string name="lbl_accepted">Accepted</string>
+    <string name="lbl_transit">Transit</string>
+    <string name="lbl_on_the_way">On the way</string>
+    <string name="lbl_delivered">Delivered</string>
+    <string name="lbl_liters">Liters</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_order_details">Order Details</string>
+    <string name="lbl_day_one">Day One</string>
+    <string name="lbl_day_next">Next Day</string>
+    <string name="lbl_day_odd">Odd Day</string>
+    <string name="lbl_day_even">Even Day</string>
+
+    <string-array name="numbersDay">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="numbersAlert1">
+        <item>Day one</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="numbersAlert2">
+        <item>Next Day</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_delivery_address">Delivery Address</string>
+    <string name="title_product_detail">Product Details</string>
+    <string name="title_product">Products</string>
+    <string name="rs">\u20B9</string>
+    <string name="hint_name">Enter name</string>
+    <string name="hint_password">Enter password</string>
+    <string name="hint_signup">SignUp</string>
+    <string name="drawer_my_address">My Address</string>
+    <string name="mapApi">AIzaSyDHCPyL6WbVdFIqT6n1j9bdg1Wy3UYC_d8</string>  <!--add google autocomplete api key here--><!--AIzaSyADOlqNV0FF63IkuP5jdTz-tCa-zOh8Oyk-->
+    <string name="web_api_key">AIzaSyDHCPyL6WbVdFIqT6n1j9bdg1Wy3UYC_d8</string> <!--add web key for geo codeing api key here--><!--AIzaSyCxDGnwC4UlJFIiGvgWftRDXrSW4P_HoYA-->
+    <string name="lbl_proceed">Proceed</string>
+    <string name="lbl_order">Order</string>
+    <string name="lbl_subscription_order">Subscription Order</string>
+
+</resources>
